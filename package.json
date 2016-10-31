@@ -1,0 +1,20 @@
+{
+  "name": "my-grid",
+  "version": "0.0.1",
+  "description": "一个兼容ie8的栅格系统，模仿bootstarp,同时兼容响应式布局.",
+  "main": "index.js",
+  "scripts": {
+    "init": "npm install",
+    "build": "grunt"
+  },
+  "author": "laden666666",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-cli": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-sass": "^1.2.1",
+    "phantomcss": "^1.1.4"
+  }
+}

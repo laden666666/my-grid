@@ -1,0 +1,190 @@
+// col的间隔占整个父容器的百分比 //
+$space: 3;
+
+// 一行col的总数 //
+$col-count: 12;
+
+// 超小屏幕（手机，小于 768px）//
+// 小屏幕（平板，大于等于 768px） //
+$screen-sm-min: 768px;
+
+// 中等屏幕（桌面显示器，大于等于 992px） //
+$screen-md-min: 992px;
+
+// 大屏幕（大桌面显示器，大于等于 1200px） //
+$screen-lg-min: 1200px;
+
+// 列的通用样式原型 //
+%col{
+    padding: 0;
+    margin-left: (100% / ((100 + $space) / $space));
+    float: left;
+    width: (100%  - (100% / ((100 + $space) / $space)));;
+}
+
+// 生成响应工具的函数 //
+@mixin responsive-tools ($size) {
+    .visible-#{$size}-inline{
+        display: inline;
+    }
+    .visible-#{$size}-block{
+        display: block;
+    }
+    .visible-#{$size}-inline-block{
+        display: inline-block;
+    }
+    .hidden-#{$size}{
+        display: none;
+    }
+}
+
+// 一个容器的宽度,通常是定义两边带余白的容器宽度时候使用 //
+.container{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// 行布局,与bootstarp不同,row不需要一定放到container里面 //
+.row{
+    //比100%宽,多出一个栅格的宽度
+    width: (100% + $space);
+
+    //向左偏移一个栅格//
+    margin-left: 0% - $space;
+
+    //生成不同尺寸的col共通部分//
+    @each $size in 'xs' 'sm' 'md' 'lg' {
+        @for $i from 1 through $col-count {
+            & > .col-#{$size}-#{$i} {
+                @extend %col;
+            }
+        }
+    }
+
+    //去除浮动效果//
+    &:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+}
+
+//生成响应式样式帮助类的默认值//
+@each $size in xs sm md lg {
+    .visible-#{$size}-inline, .visible-#{$size}-block, .visible-#{$size}-inline-block{
+        display: none;
+    }
+
+}
+
+// 针对ie8的兼容,ie8的表现形式永远是lg的样式 //
+/* 针对ie8的兼容 */
+$size: lg;
+$hack_ie8:'\\0screen';
+@media #{$hack_ie8} {
+    .visible-#{$size}-inline{
+        display: none;
+    }
+    .visible-#{$size}-block{
+        display: block;
+    }
+    .visible-#{$size}-inline-block{
+        display: inline-block;
+    }
+    .hidden-#{$size}{
+        display: none;
+    }
+
+    //生成默认的响应式样式帮助类//
+    //生成不同尺寸的col共通部分//
+    @for $i from 1 through $col-count {
+        #col-#{$i} {
+            width: (100% * $i /$col-count  - (100% / ((100 + $space) / $space)));
+        }
+
+        #col-offset-#{$i} {
+            margin-left: (100% * $i /$col-count) + (100% / ((100 + $space) / $space));
+        }
+    }
+
+    @each $size in xs sm md ld {
+        //生成不同尺寸的col共通部分//
+        @for $i from 1 through $col-count {
+            .col-#{$size}-#{$i} {
+                @extend #col-#{$i};
+            }
+
+            .col-#{$size}-offset-#{$i} {
+                @extend #col-offset-#{$i};
+            }
+        }
+    }
+
+}
+
+// 在不同设备上重写样式 //
+// --------------------------- 定义xs样式,这是默认样式,超小屏幕(手机) ----------------------------- //
+@media screen and (max-width: $screen-sm-min) {
+    // 仅xs的行布局能正常显示;sm md lg都不支持,每列均为100% //
+    @include responsive-tools('xs');
+}
+// --------------------------- 定义sm样式,这是默认样式,小屏幕（平板) ----------------------------- //
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
+    @include responsive-tools('sm');
+}
+// --------------------------- 定义md样式,这是默认样式,中屏幕(小桌面) ----------------------------- //
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+    @include responsive-tools('md');
+}
+// --------------------------- 定义lg样式,这是默认样式,大屏幕(大桌面) ----------------------------- //
+@media screen and (min-width: $screen-lg-min) {
+    @include responsive-tools('lg');
+}
+
+// --------------------------- 定义在不同显示器的情况下的列的表现 -----------------------------//
+@media screen and (min-width: 0) {
+    @for $i from 1 through $col-count {
+        .row > .col-xs-#{$i} {
+            width: (100% * $i /$col-count  - (100% / ((100 + $space) / $space)));
+        }
+
+        .row > .col-xs-offset-#{$i} {
+            margin-left: (100% * $i /$col-count) + (100% / ((100 + $space) / $space));
+        }
+    }
+}
+@media screen and (min-width: $screen-sm-min) {
+    @for $i from 1 through $col-count {
+        .row > .col-sm-#{$i} {
+            width: (100% * $i /$col-count  - (100% / ((100 + $space) / $space)));
+        }
+
+        .row > .col-sm-offset-#{$i} {
+            margin-left: (100% * $i /$col-count) + (100% / ((100 + $space) / $space));
+        }
+    }
+}
+@media screen and (min-width: $screen-md-min) {
+    @for $i from 1 through $col-count {
+        .row > .col-md-#{$i} {
+            width: (100% * $i /$col-count  - (100% / ((100 + $space) / $space)));
+        }
+
+        .row > .col-md-offset-#{$i} {
+            margin-left: (100% * $i /$col-count) + (100% / ((100 + $space) / $space));
+        }
+    }
+}
+@media screen and (min-width: $screen-lg-min) {
+    @for $i from 1 through $col-count {
+        .row > .col-lg-#{$i} {
+            width: (100% * $i /$col-count  - (100% / ((100 + $space) / $space)));
+        }
+
+        .row > .col-lg-offset-#{$i} {
+            margin-left: (100% * $i /$col-count) + (100% / ((100 + $space) / $space));
+        }
+    }
+}
+

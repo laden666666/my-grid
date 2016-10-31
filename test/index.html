@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../dist/my-grid.css">
+    <style>
+        .div{
+            height: 25px;
+            line-height: 25px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .red{
+            background: red;
+        }
+        .green{
+            background: green;
+        }
+        .blue{
+            background: blue;
+        }
+        .purple{
+            background: purple;
+        }
+        .pink{
+            background: pink;
+        }
+        .yellow{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="div red col-lg-6">col-lg-6</div>
+    <div class="div red col-lg-6">col-lg-6</div>
+
+    <div class="div green col-md-offset-3 col-md-3 col-lg-9">col-md-offset-3 col-md-4 col-lg-9</div>
+    <div class="div green col-md-6 visible-md-block">col-md-6 visible-md-block</div>
+
+    <div class="div blue col-lg-4">col-lg-4</div>
+    <div class="div blue col-lg-4">col-lg-4</div>
+    <div class="div blue col-lg-4">col-lg-4</div>
+
+    <div class="div purple col-lg-3 hidden-xs">col-lg-3 hidden-xs</div>
+    <div class="div purple col-lg-3 hidden-sm">col-lg-3 hidden-sm</div>
+    <div class="div purple col-lg-3 hidden-md">col-lg-3 hidden-md</div>
+    <div class="div purple col-lg-3 hidden-lg">col-lg-3 hidden-lg</div>
+
+    <div class="div purple col-lg-3 visible-xs-block">col-lg-3 visible-xs-block</div>
+    <div class="div purple col-lg-3 visible-sm-block">col-lg-3 visible-sm-block</div>
+    <div class="div purple col-lg-3 visible-md-block">col-lg-3 visible-md-block</div>
+    <div class="div purple col-lg-3 visible-lg-block">col-lg-3 visible-lg-block</div>
+
+    <div class="pink col-lg-6">
+        <div class="row">
+            <div class="div blue col-lg-4">col-lg-4</div>
+            <div class="div blue col-lg-4">col-lg-4</div>
+            <div class="div blue col-lg-4">col-lg-4</div>
+
+            <div class="div red col-lg-6">col-lg-6</div>
+            <div class="div red col-lg-6">col-lg-6</div>
+        </div>
+    </div>
+    <div class="yellow col-lg-6">
+        <div class="row">
+            <div class="div purple col-lg-3 col-md-6">col-lg-3 col-md-6</div>
+            <div class="div purple col-lg-3 col-md-6">col-lg-3 col-md-6</div>
+            <div class="div purple col-lg-3 col-md-6">col-lg-3 col-md-6</div>
+            <div class="div purple col-lg-3 col-md-6">col-lg-3 col-md-6</div>
+
+            <div class="div green col-lg-3">col-lg-3</div>
+            <div class="div green col-lg-9">col-lg-3</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
