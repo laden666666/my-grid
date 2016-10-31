@@ -40,7 +40,7 @@ $screen-lg-min: 1200px;
 
 // 一个容器的宽度,通常是定义两边带余白的容器宽度时候使用 //
 .container{
-    width: 1000px;
+    width: 1170px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -128,10 +128,16 @@ $hack_ie8:'\\0screen';
 @media screen and (max-width: $screen-sm-min) {
     // 仅xs的行布局能正常显示;sm md lg都不支持,每列均为100% //
     @include responsive-tools('xs');
+    .container{
+        width: 750px;
+    }
 }
 // --------------------------- 定义sm样式,这是默认样式,小屏幕（平板) ----------------------------- //
 @media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
     @include responsive-tools('sm');
+    .container{
+        width: 970px;
+    }
 }
 // --------------------------- 定义md样式,这是默认样式,中屏幕(小桌面) ----------------------------- //
 @media screen and (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
