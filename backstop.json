@@ -1,0 +1,52 @@
+{
+  "id": "my-grid_test",
+  "viewports": [
+    {
+      "name": "xs",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "sm",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "md",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "lg",
+      "width": 1280,
+      "height": 800
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "my-grid.css",
+      "url": "http://localhost:3000/test/index.html",
+      "selectors": [
+        ".row"
+      ],
+      "selectorExpansion": false
+    },{
+      "label": "my-grid-ie8.css",
+      "url": "http://localhost:3000/test/index-ie8.html",
+      "selectors": [
+        ".row"
+      ],
+      "selectorExpansion": false
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "test/backstop/bitmaps_reference",
+    "bitmaps_test": "test/backstop/bitmaps_test",
+    "casper_scripts": "test/backstop/casper_scripts",
+    "html_report": "test/backstop/html_report",
+    "ci_report": "test/backstop/ci_report"
+  },
+  "engine": "phantomjs",
+  "report": ["browser"],
+  "debug": false
+}
