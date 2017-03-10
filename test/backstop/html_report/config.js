@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/my-grid_test_my-gridcss_0_row_0_xs.png",
-        "test": "../bitmaps_test/20170212-110650/my-grid_test_my-gridcss_0_row_0_xs.png",
+        "test": "../bitmaps_test/20170213-090927/my-grid_test_my-gridcss_0_row_0_xs.png",
         "selector": ".row",
         "fileName": "my-grid_test_my-gridcss_0_row_0_xs.png",
         "label": "my-grid.css",
@@ -16,7 +16,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 26,
+          "analysisTime": 35,
           "getDiffImage": null
         }
       },
@@ -25,7 +25,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/my-grid_test_my-gridcss_0_row_1_sm.png",
-        "test": "../bitmaps_test/20170212-110650/my-grid_test_my-gridcss_0_row_1_sm.png",
+        "test": "../bitmaps_test/20170213-090927/my-grid_test_my-gridcss_0_row_1_sm.png",
         "selector": ".row",
         "fileName": "my-grid_test_my-gridcss_0_row_1_sm.png",
         "label": "my-grid.css",
@@ -46,7 +46,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/my-grid_test_my-gridcss_0_row_2_md.png",
-        "test": "../bitmaps_test/20170212-110650/my-grid_test_my-gridcss_0_row_2_md.png",
+        "test": "../bitmaps_test/20170213-090927/my-grid_test_my-gridcss_0_row_2_md.png",
         "selector": ".row",
         "fileName": "my-grid_test_my-gridcss_0_row_2_md.png",
         "label": "my-grid.css",
@@ -58,7 +58,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 85,
+          "analysisTime": 88,
           "getDiffImage": null
         }
       },
@@ -67,7 +67,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/my-grid_test_my-gridcss_0_row_3_lg.png",
-        "test": "../bitmaps_test/20170212-110650/my-grid_test_my-gridcss_0_row_3_lg.png",
+        "test": "../bitmaps_test/20170213-090927/my-grid_test_my-gridcss_0_row_3_lg.png",
         "selector": ".row",
         "fileName": "my-grid_test_my-gridcss_0_row_3_lg.png",
         "label": "my-grid.css",
@@ -79,7 +79,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 30,
+          "analysisTime": 43,
           "getDiffImage": null
         }
       },
@@ -88,7 +88,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/my-grid_test_my-grid-ie8css_0_row_0_xs.png",
-        "test": "../bitmaps_test/20170212-110650/my-grid_test_my-grid-ie8css_0_row_0_xs.png",
+        "test": "../bitmaps_test/20170213-090927/my-grid_test_my-grid-ie8css_0_row_0_xs.png",
         "selector": ".row",
         "fileName": "my-grid_test_my-grid-ie8css_0_row_0_xs.png",
         "label": "my-grid-ie8.css",
@@ -100,7 +100,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 37,
+          "analysisTime": 63,
           "getDiffImage": null
         }
       },
@@ -109,7 +109,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/my-grid_test_my-grid-ie8css_0_row_1_sm.png",
-        "test": "../bitmaps_test/20170212-110650/my-grid_test_my-grid-ie8css_0_row_1_sm.png",
+        "test": "../bitmaps_test/20170213-090927/my-grid_test_my-grid-ie8css_0_row_1_sm.png",
         "selector": ".row",
         "fileName": "my-grid_test_my-grid-ie8css_0_row_1_sm.png",
         "label": "my-grid-ie8.css",
@@ -121,7 +121,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 61,
+          "analysisTime": 66,
           "getDiffImage": null
         }
       },
@@ -130,7 +130,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/my-grid_test_my-grid-ie8css_0_row_2_md.png",
-        "test": "../bitmaps_test/20170212-110650/my-grid_test_my-grid-ie8css_0_row_2_md.png",
+        "test": "../bitmaps_test/20170213-090927/my-grid_test_my-grid-ie8css_0_row_2_md.png",
         "selector": ".row",
         "fileName": "my-grid_test_my-grid-ie8css_0_row_2_md.png",
         "label": "my-grid-ie8.css",
@@ -142,7 +142,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 89,
+          "analysisTime": 99,
           "getDiffImage": null
         }
       },
@@ -151,7 +151,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/my-grid_test_my-grid-ie8css_0_row_3_lg.png",
-        "test": "../bitmaps_test/20170212-110650/my-grid_test_my-grid-ie8css_0_row_3_lg.png",
+        "test": "../bitmaps_test/20170213-090927/my-grid_test_my-grid-ie8css_0_row_3_lg.png",
         "selector": ".row",
         "fileName": "my-grid_test_my-grid-ie8css_0_row_3_lg.png",
         "label": "my-grid-ie8.css",
@@ -163,7 +163,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 29,
+          "analysisTime": 39,
           "getDiffImage": null
         }
       },
